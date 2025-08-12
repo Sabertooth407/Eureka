@@ -1,4 +1,6 @@
 <script>
+  import { onMount, onDestroy } from "svelte";
+
   const images = [
     "/images/img1.jpg",
     "/images/img2.jpg",
@@ -9,9 +11,35 @@
     "/images/img7.jpg",
     "/images/img8.jpg",
     "/images/img9.jpg",
-    "images/img10.jpg",
+    "/images/img10.jpg",
     "/images/img11.jpg"
   ];
+
+  let carousel;
+  let currentIndex = 0;
+  let intervalId;
+
+  function scrollToIndex(index) {
+    if (carousel) {
+      const itemWidth = carousel.offsetWidth; // one full image width
+      carousel.scrollTo({
+        left: index * itemWidth,
+        behavior: "smooth"
+      });
+    }
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    scrollToIndex(currentIndex);
+  }
+
+  onMount(() => {
+    intervalId = setInterval(nextSlide, 3000);
+    return () => clearInterval(intervalId);
+  });
+
+  onDestroy(() => clearInterval(intervalId));
 </script>
 
 <style>
@@ -23,13 +51,14 @@
   :global(html), :global(body) {
     height: 100%;
     margin: 0;
-    overflow: hidden; /* disable scroll */
   }
+
+  /* DESKTOP */
   .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px; /* space for navbar */
+    padding-top: 80px; /* space for navbar */
     min-height: 100vh;
     background: transparent;
     overflow-x: hidden;
@@ -79,28 +108,27 @@
   }
 
   .bottom-row {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: -10rem; /* pull it up so it aligns with last side images */
-  flex-wrap: wrap;
-}
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: -10rem;
+    flex-wrap: wrap;
+  }
 
-.bottom-row img {
-  width: 160px; /* bigger than 140px */
-  height: 160px;
-  object-fit: cover;
-  border-radius: 20%;
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-}
+  .bottom-row img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20%;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
 
-.bottom-row img:hover {
-  transform: scale(1.05);
-}
-
+  .bottom-row img:hover {
+    transform: scale(1.05);
+  }
 
   @keyframes fadeInUp {
     to {
@@ -109,52 +137,98 @@
     }
   }
 
+  /* MOBILE CAROUSEL */
   @media (max-width: 900px) {
-    .content-wrapper {
-      flex-direction: column;
-      gap: 2rem;
+    .desktop-layout {
+      display: none;
     }
-    .image-column {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    .carousel {
+      display: flex;
+      overflow: hidden; /* Only one image visible */
+      width: 100%;
+      height: 300px;
+      position: relative;
+      padding-top: 80px; /* for navbar */
+    }
+
+    .carousel img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+      border-radius: 0.5rem;
+    }
+
+    .mobile-about-text {
+      padding: 1rem;
+      text-align: center;
+      font-family: 'FuturaBold', sans-serif;
+      color: white;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  }
+
+  @media (min-width: 901px) {
+    .carousel, .mobile-about-text {
+      display: none;
     }
   }
 </style>
 
-<div class="about-container">
-  <div class="content-wrapper">
-    <!-- Left column -->
-    <div class="image-column">
-      <img src={images[0]} alt="fest" style="animation-delay: 0.1s;">
-      <img src={images[1]} alt="fest" style="animation-delay: 0.3s;">
-      <img src={images[2]} alt="fest" style="animation-delay: 0.5s;">
-      <img src={images[3]} alt="fest" style="animation-delay: 0.7s;">
+<!-- MOBILE VIEW -->
+<div class="carousel" bind:this={carousel}>
+  {#each images as img}
+    <img src={img} alt="fest" />
+  {/each}
+</div>
+<div class="mobile-about-text">
+  <h2>About Eureka</h2>
+  <p>
+    Eureka is our annual Physics Fest — a celebration of science, discovery, and innovation.
+    From mind-bending experiments to inspiring talks, we bring together curious minds and passionate souls.
+    Dive into the wonders of physics and experience the thrill of possibilities!
+  </p>
+</div>
+
+<!-- DESKTOP VIEW -->
+<div class="desktop-layout">
+  <div class="about-container">
+    <div class="content-wrapper">
+      <!-- Left column -->
+      <div class="image-column">
+        <img src={images[0]} alt="fest" style="animation-delay: 0.1s;">
+        <img src={images[1]} alt="fest" style="animation-delay: 0.3s;">
+        <img src={images[2]} alt="fest" style="animation-delay: 0.5s;">
+        <img src={images[3]} alt="fest" style="animation-delay: 0.7s;">
+      </div>
+
+      <!-- Text in center -->
+      <div class="text-box">
+        <h2>About Eureka</h2>
+        <p>
+          Eureka is our annual Physics Fest — a celebration of science, discovery, and innovation.
+          From mind-bending experiments to inspiring talks, we bring together curious minds and passionate souls.
+          Dive into the wonders of physics and experience the thrill of possibilities!
+        </p>
+      </div>
+
+      <!-- Right column -->
+      <div class="image-column">
+        <img src={images[4]} alt="fest" style="animation-delay: 0.2s;">
+        <img src={images[5]} alt="fest" style="animation-delay: 0.4s;">
+        <img src={images[6]} alt="fest" style="animation-delay: 0.6s;">
+        <img src={images[7]} alt="fest" style="animation-delay: 0.8s;">
+      </div>
     </div>
 
-    <!-- Text in center -->
-    <div class="text-box">
-      <h2>About Eureka</h2>
-      <p>
-        Eureka is our annual Physics Fest — a celebration of science, discovery, and innovation.  
-        From mind-bending experiments to inspiring talks, we bring together curious minds and passionate souls.  
-        Dive into the wonders of physics and experience the thrill of possibilities!
-      </p>
+    <!-- Bottom images -->
+    <div class="bottom-row">
+      <img src={images[8]} alt="fest" style="animation-delay: 0.3s;">
+      <img src={images[9]} alt="fest" style="animation-delay: 0.5s;">
+      <img src={images[10]} alt="fest" style="animation-delay: 0.7s;">
     </div>
-
-    <!-- Right column -->
-    <div class="image-column">
-      <img src={images[4]} alt="fest" style="animation-delay: 0.2s;">
-      <img src={images[5]} alt="fest" style="animation-delay: 0.4s;">
-      <img src={images[6]} alt="fest" style="animation-delay: 0.6s;">
-      <img src={images[7]} alt="fest" style="animation-delay: 0.8s;">
-    </div>
-  </div>
-
-  <!-- Bottom images -->
-  <div class="bottom-row">
-    <img src={images[8]} alt="fest" style="animation-delay: 0.3s;">
-    <img src={images[9]} alt="fest" style="animation-delay: 0.5s;">
-    <img src={images[10]} alt="fest" style="animation-delay: 0.7s;">
   </div>
 </div>
