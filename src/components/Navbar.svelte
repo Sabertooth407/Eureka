@@ -1,6 +1,5 @@
 <script>
   import { link } from 'svelte-spa-router';
-
   let menuOpen = false;
 
   function toggleMenu() {
@@ -18,11 +17,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
     z-index: 1000;
     background: none;
     font-family: 'FuturaBold', sans-serif;
     padding-bottom: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  /* Desktop link container */
+  .links {
+    display: flex;
+    gap: 3rem; /* Keep wide spacing for desktop */
   }
 
   a {
@@ -61,6 +67,10 @@
     cursor: pointer;
     width: 30px;
     height: 25px;
+    z-index: 1100;
+    position: absolute;
+    right: 1rem; /* keeps it inside screen */
+    top: 15px;
   }
 
   .burger div {
@@ -70,30 +80,45 @@
     transition: 0.3s;
   }
 
+  /* Animate burger to X */
+  .burger.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .burger.open div:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
   /* Mobile styles */
   @media (max-width: 768px) {
     nav {
-      justify-content: space-between;
-      padding: 0 1rem;
+      justify-content: flex-end;
       transform: none;
       left: 0;
+      padding: 0 1rem;
     }
 
+    /* Hide desktop layout */
     .links {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1rem 0;
       display: none;
     }
 
+    /* Fullscreen overlay menu */
     .links.open {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1050;
     }
 
     .burger {
@@ -103,16 +128,16 @@
 </style>
 
 <nav>
-  <div class="burger" on:click={toggleMenu}>
+  <div class="burger {menuOpen ? 'open' : ''}" on:click={toggleMenu}>
     <div></div>
     <div></div>
     <div></div>
   </div>
 
   <div class="links {menuOpen ? 'open' : ''}">
-    <a use:link href="/">Home</a>
-    <a use:link href="/about">About</a>
-    <a use:link href="/events">Events</a>
-    <a use:link href="/contact">Contact</a>
+    <a use:link href="/" on:click={() => menuOpen = false}>Home</a>
+    <a use:link href="/about" on:click={() => menuOpen = false}>About</a>
+    <a use:link href="/events" on:click={() => menuOpen = false}>Events</a>
+    <a use:link href="/contact" on:click={() => menuOpen = false}>Contact</a>
   </div>
 </nav>
