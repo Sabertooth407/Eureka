@@ -34,7 +34,6 @@
   const instagramUrl = "https://www.instagram.com/eureka_2025.pa?utm_source=ig_web_button_share_sheet&igsh=MWUwdmF0OGFvMWxydA==";
   const linkedinUrl = "https://linkedin.com/company/department-of-physics-electronics";
 </script>
-
 <style>
   @font-face {
     font-family: 'FuturaBold';
@@ -54,9 +53,10 @@
     box-sizing: border-box;
   }
 
+  /* Logo scaling */
   img {
-    max-width: 300px;
-    width: 100%;
+    max-width: 90%;
+    width: clamp(150px, 30vw, 300px);
     height: auto;
     margin-bottom: 1rem;
     animation: glowPulse 2.5s ease-in-out infinite;
@@ -75,38 +75,56 @@
     }
   }
 
+  /* Timer text */
   .timer {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin-top: 1rem;
     font-weight: bold;
     font-family: 'FuturaBold', sans-serif;
+    color: white;
   }
 
+  /* Tagline */
   .tagline {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 3vw, 2rem);
     margin-top: 0.5rem;
     color: #ffffff;
     font-family: 'FuturaBold', sans-serif;
+    max-width: 90%;
   }
 
+  /* Social icons */
   .social-icons {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  justify-content: center;
-}
+    display: flex;
+    gap: clamp(0.8rem, 3vw, 1.5rem);
+    margin-top: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.25s ease;
-}
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+  }
 
-.social-icons a:hover {
-  transform: scale(1.2);
-}
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
 
+  /* Icon size scales with screen */
+  .social-icons svg {
+    width: clamp(24px, 4vw, 36px);
+    height: clamp(24px, 4vw, 36px);
+  }
+
+  /* Extra padding for very small screens */
+  @media (max-width: 480px) {
+    .home {
+      padding-top: 50px;
+    }
+  }
 </style>
 
 <div class="home">
