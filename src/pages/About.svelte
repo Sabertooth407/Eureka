@@ -2,17 +2,17 @@
   import { onMount, onDestroy } from "svelte";
 
   const images = [
-    "/img1.jpg",
-    "/img2.jpg",
-    "/img3.jpg",
-    "/img4.jpg",
-    "/img5.jpg",
-    "/img6.jpg",
-    "/img7.jpg",
-    "/img8.jpg",
-    "/img9.jpg",
-    "/img10.jpg",
-    "/img11.jpg"
+    "/img1.JPG",
+    "/img2.JPG",
+    "/img3.JPG",
+    "/img4.JPG",
+    "/img5.JPG",
+    "/img6.JPG",
+    "/img7.JPG",
+    "/img8.JPG",
+    "/img9.JPG",
+    "/img10.JPG",
+    "/img11.JPG"
   ];
 
   let carousel;
