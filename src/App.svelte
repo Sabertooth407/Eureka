@@ -3,9 +3,10 @@
   import Navbar from './components/Navbar.svelte';
   import Home from './pages/Home.svelte';
   import Background from './components/Background.svelte';
-
+  import About from './pages/About.svelte';
   const routes = {
     '/': Home,
+    '/about': About
   };
 </script>
 
