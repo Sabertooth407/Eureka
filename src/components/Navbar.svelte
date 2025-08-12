@@ -67,14 +67,15 @@
     cursor: pointer;
     width: 30px;
     height: 25px;
-    z-index: 1100;
-    position: absolute;
+    z-index: 2000;
+    position: fixed;
     right: 1rem; /* keeps it inside screen */
-    top: 15px;
+    top: 1rem;
   }
 
   .burger div {
     height: 3px;
+    width: 25px;
     background: white;
     border-radius: 2px;
     transition: 0.3s;
