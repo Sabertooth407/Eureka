@@ -115,6 +115,22 @@ img {
   transform: scale(1.2);
 }
 
+.brochure-btn {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: 2px solid #ff6ec4;
+  border-radius: 8px;
+  background: transparent;
+  color: #ff6ec4;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.brochure-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 15px rgba(255, 110, 196, 0.3);
+}
+
 /* Icon size scales with screen */
 .social-icons svg {
   width: clamp(24px, 4vw, 36px);
@@ -246,6 +262,9 @@ img {
           .774 23.2 0 22.225 0z"/>
       </svg>
     </a>
+    <a href="/brochure.pdf" target="_blank" rel="noopener noreferrer" class="brochure-btn">
+    Brochure
+  </a>
   </div>
 
   <!-- Mobile-only navigation buttons -->
@@ -262,5 +281,7 @@ img {
   <a href="/#/contact">
     <button>Contact</button>
   </a>
+  <a href="/brochure.pdf" target="_blank" rel="noopener noreferrer">
+    <button>Brochure</button>
   </div>
 </div>
