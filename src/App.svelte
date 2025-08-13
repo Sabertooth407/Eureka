@@ -6,11 +6,13 @@
   import About from './About.svelte';
   import Events from './Events.svelte';
   import Registration from './Registration.svelte';
+  import Contacts from './Contacts.svelte';
   const routes = {
     '/': Home,
     '/about': About,
     '/events': Events,
-    '/registration': Registration
+    '/registration': Registration,
+    '/contact': Contacts
   };
 </script>
 

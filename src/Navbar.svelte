@@ -91,7 +91,7 @@
   @media (max-width: 768px) {
     nav {
       justify-content: flex-end;
-      padding: 0 1rem;
+      padding: 0;
     }
     .links {
       display: none;
