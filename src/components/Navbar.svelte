@@ -1,9 +1,13 @@
 <script>
-  import { link } from 'svelte-spa-router';
+  import { link, location } from 'svelte-spa-router';
   let menuOpen = false;
 
   function toggleMenu() {
     menuOpen = !menuOpen;
+  }
+
+  function isMobile() {
+    return typeof window !== 'undefined' && window.innerWidth <= 768;
   }
 </script>
 
@@ -25,10 +29,9 @@
     max-width: 1000px;
   }
 
-  /* Desktop link container */
   .links {
     display: flex;
-    gap: 3rem; /* Keep wide spacing for desktop */
+    gap: 3rem;
   }
 
   a {
@@ -58,7 +61,6 @@
     width: 100%;
   }
 
-  /* Burger button */
   .burger {
     display: none;
     flex-direction: column;
@@ -69,7 +71,7 @@
     height: 25px;
     z-index: 2000;
     position: fixed;
-    right: 1rem; /* keeps it inside screen */
+    right: 1rem;
     top: 1rem;
   }
 
@@ -81,7 +83,6 @@
     transition: 0.3s;
   }
 
-  /* Animate burger to X */
   .burger.open div:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -92,7 +93,6 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
-  /* Mobile styles */
   @media (max-width: 768px) {
     nav {
       justify-content: flex-end;
@@ -100,13 +100,9 @@
       left: 0;
       padding: 0 1rem;
     }
-
-    /* Hide desktop layout */
     .links {
       display: none;
     }
-
-    /* Fullscreen overlay menu */
     .links.open {
       display: flex;
       flex-direction: column;
@@ -121,13 +117,14 @@
       background: rgba(0, 0, 0, 0.9);
       z-index: 1050;
     }
-
     .burger {
       display: flex;
     }
   }
 </style>
 
+<!-- Only render if NOT (mobile + home page) -->
+{#if !(isMobile() && $location === '/')}
 <nav>
   <div class="burger {menuOpen ? 'open' : ''}" on:click={toggleMenu}>
     <div></div>
@@ -142,3 +139,4 @@
     <a use:link href="/contact" on:click={() => menuOpen = false}>Contact</a>
   </div>
 </nav>
+{/if}
