@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 110px);
-  padding-top: 70px;
+  padding-top: 15px;
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -252,6 +252,9 @@ img {
   <div class="mobile-buttons">
     <a href="/#/about">
     <button>About</button>
+  </a>
+  <a href="/#/registration">
+    <button>Register</button>
   </a>
    <a href="/#/events">
     <button>Events</button>

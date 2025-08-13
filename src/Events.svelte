@@ -23,16 +23,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
     padding-bottom: 24px;
-    min-height: calc(100vh - 84px);
   }
+  
 
   h1 {
     font-family: 'Transcity DEMO', sans-serif;
     font-size: 3rem;
     color: white;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 2px;
     text-align: center;
   }

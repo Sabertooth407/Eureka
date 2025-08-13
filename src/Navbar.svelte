@@ -13,20 +13,15 @@
 
 <style>
   nav {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* no fixed positioning */
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
-    background: none;
     font-family: 'FuturaBold', sans-serif;
-    padding-bottom: 1.5rem;
     width: 100%;
     max-width: 1000px;
+    margin: 0 auto; /* center horizontally */
   }
 
   .links {
@@ -70,7 +65,7 @@
     width: 30px;
     height: 25px;
     z-index: 2000;
-    position: fixed;
+    position: absolute;
     right: 1rem;
     top: 1rem;
   }
@@ -96,8 +91,6 @@
   @media (max-width: 768px) {
     nav {
       justify-content: flex-end;
-      transform: none;
-      left: 0;
       padding: 0 1rem;
     }
     .links {
@@ -125,18 +118,21 @@
 
 <!-- Only render if NOT (mobile + home page) -->
 {#if !(isMobile() && $location === '/')}
-<nav>
-  <div class="burger {menuOpen ? 'open' : ''}" on:click={toggleMenu}>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
 
-  <div class="links {menuOpen ? 'open' : ''}">
-    <a use:link href="/" on:click={() => menuOpen = false}>Home</a>
-    <a use:link href="/about" on:click={() => menuOpen = false}>About</a>
-    <a use:link href="/events" on:click={() => menuOpen = false}>Events</a>
-    <a use:link href="/contact" on:click={() => menuOpen = false}>Contact</a>
-  </div>
-</nav>
+  <nav>
+    <div class="burger {menuOpen ? 'open' : ''}" on:click={toggleMenu}>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="links {menuOpen ? 'open' : ''}">
+      <a use:link href="/" on:click={() => menuOpen = false}>Home</a>
+      <a use:link href="/registration" on:click={() => menuOpen = false}>Register</a>
+      <a use:link href="/about" on:click={() => menuOpen = false}>About</a>
+      <a use:link href="/events" on:click={() => menuOpen = false}>Events</a>
+      <a use:link href="/contact" on:click={() => menuOpen = false}>Contact</a>
+    </div>
+  </nav>
+
 {/if}

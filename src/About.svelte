@@ -65,7 +65,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* space for navbar */
     min-height: 100vh;
     background: transparent;
     overflow-x: hidden;
@@ -173,7 +172,6 @@
       width: 100%;
       height: 300px;
       position: relative;
-      padding-top: 80px; /* for navbar */
     }
 
     .carousel img {
@@ -185,6 +183,13 @@
       border-radius: 0.5rem;
     }
 
+    h2{
+      font-family: 'Transcity DEMO', sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      color: white;
+      margin-bottom: 1rem;
+    }
     .mobile-about-text {
       padding: 1rem;
       text-align: center;

@@ -5,10 +5,12 @@
   import Background from './Background.svelte';
   import About from './About.svelte';
   import Events from './Events.svelte';
+  import Registration from './Registration.svelte';
   const routes = {
     '/': Home,
     '/about': About,
-    '/events': Events
+    '/events': Events,
+    '/registration': Registration
   };
 </script>
 
