@@ -1,12 +1,14 @@
 <script>
   import Router from 'svelte-spa-router';
-  import Navbar from './components/Navbar.svelte';
-  import Home from './pages/Home.svelte';
-  import Background from './components/Background.svelte';
-  import About from './pages/About.svelte';
+  import Navbar from './Navbar.svelte';
+  import Home from './Home.svelte';
+  import Background from './Background.svelte';
+  import About from './About.svelte';
+  import Events from './Events.svelte';
   const routes = {
     '/': Home,
-    '/about': About
+    '/about': About,
+    '/events': Events
   };
 </script>
 
