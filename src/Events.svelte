@@ -13,6 +13,12 @@
 </script>
 
 <style>
+  @font-face {
+    font-family: 'Transcity DEMO';
+    src: url('/Transcity DEMO.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
   .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -23,8 +29,8 @@
   }
 
   h1 {
-    font-family: 'FuturaBold', system-ui, sans-serif;
-    font-size: 2rem;
+    font-family: 'Transcity DEMO', sans-serif;
+    font-size: 3rem;
     color: white;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;

@@ -48,6 +48,13 @@
     src: url('/FuturaBold.ttf') format('truetype');
   }
 
+  @font-face {
+    font-family: 'Transcity DEMO';
+    src: url('/Transcity DEMO.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
   :global(html), :global(body) {
     height: 100%;
     margin: 0;
@@ -58,11 +65,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px; /* space for navbar */
+    padding-top: 100px; /* space for navbar */
     min-height: 100vh;
     background: transparent;
     overflow-x: hidden;
   }
+
+  .about-heading {
+  font-family: 'Transcity DEMO', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -90px;
+}
 
   .content-wrapper {
     display: flex;
@@ -84,6 +107,7 @@
     line-height: 1.6;
     text-align: center;
     z-index: 10;
+    max-width: 700px;
   }
 
   .image-column {
@@ -110,7 +134,7 @@
   .bottom-row {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 5rem;
     margin-top: -10rem;
     flex-wrap: wrap;
   }
@@ -205,14 +229,16 @@
         <img src={images[3]} alt="fest" style="animation-delay: 0.7s;">
       </div>
 
-      <!-- Text in center -->
-      <div class="text-box">
-        <h2>About Eureka</h2>
-        <p>
-          Eureka is our annual Physics Fest — a celebration of science, discovery, and innovation.
-          From mind-bending experiments to inspiring talks, we bring together curious minds and passionate souls.
-          Dive into the wonders of physics and experience the thrill of possibilities!
-        </p>
+      <!-- Heading OUTSIDE the text box -->
+      <div class="text-section">
+        <h2 class="about-heading">About Eureka</h2>
+        <div class="text-box">
+          <p>
+            Eureka is our annual Physics Fest — a celebration of science, discovery, and innovation.
+            From mind-bending experiments to inspiring talks, we bring together curious minds and passionate souls.
+            Dive into the wonders of physics and experience the thrill of possibilities!
+          </p>
+        </div>
       </div>
 
       <!-- Right column -->
@@ -232,3 +258,4 @@
     </div>
   </div>
 </div>
+
