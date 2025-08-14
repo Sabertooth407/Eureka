@@ -58,6 +58,7 @@
   :global(html), :global(body) {
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
   }
 
   /* DESKTOP */
@@ -65,7 +66,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     background: transparent;
     overflow-x: hidden;
   }
