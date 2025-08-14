@@ -3,11 +3,11 @@
 
   const events = [
     { name: "Maze Frenzy", img: "/mazefrenzy.png", link: "/mazefrenzy" },
-    { name: "The Physicist's Code", img: "/physicistscode.png", link: "/physicists-code" },
+    { name: "The Physicist's Code", img: "/physicistscode.png", link: "/thephysicistscode" },
     { name: "PhyMUN", img: "/phymun.png", link: "/phymun" },
-    { name: "Ad Astra Abyssoque", img: "/adastra.png", link: "/ad-astra-abyssoque" },
-    { name: "Newton's Meme-athon", img: "/newtonsmemeathon.png", link: "/newtons-meme-athon" },
-    { name: "Tri Physics Tournament", img: "/triphysics.png", link: "/tri-physics-tournament" },
+    { name: "Ad Astra Abyssoque", img: "/adastra.png", link: "/adastra" },
+    { name: "Newton's Meme-athon", img: "/newtonsmemeathon.png", link: "/newtonsmemeathon" },
+    { name: "Tri Physics Tournament", img: "/triphysics.png", link: "/triphysicstournament" },
     { name: "Oblivion", img: "/oblivion.png", link: "/oblivion" }
   ];
 </script>

@@ -8,13 +8,25 @@
   import Registration from './Registration.svelte';
   import Contacts from './Contacts.svelte';
   import MazeFrenzy from './MazeFrenzy.svelte';
+  import ThePhysicistsCode from './ThePhysicistsCode.svelte';
+  import PhyMUN from './PhyMUN.svelte';
+  import AdAstra from './AdAstra.svelte';
+  import NewtonsMemeathon from './NewtonsMemeathon.svelte';
+  import TriPhysicsTournament from './TriPhysicsTournament.svelte';
+  import Oblivion from './Oblivion.svelte';
   const routes = {
     '/': Home,
     '/about': About,
     '/events': Events,
     '/registration': Registration,
     '/contact': Contacts,
-    '/mazefrenzy': MazeFrenzy
+    '/mazefrenzy': MazeFrenzy,
+    '/thephysicistscode': ThePhysicistsCode,
+    '/phymun': PhyMUN,
+    '/adastra': AdAstra,
+    '/newtonsmemeathon': NewtonsMemeathon,
+    '/triphysicstournament': TriPhysicsTournament,
+    '/oblivion': Oblivion
   };
 </script>
 
