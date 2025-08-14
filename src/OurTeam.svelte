@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh; /* full height */
-    background-color: black; /* change if needed */
     color: white;
     font-family: 'Transcity DEMO', sans-serif;
     font-size: 3rem;

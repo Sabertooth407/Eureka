@@ -274,12 +274,15 @@ img {
 
   <!-- Mobile-only navigation buttons -->
   <div class="mobile-buttons">
-    <a href="/#/about">
-    <button>About</button>
-  </a>
+    
   <a href="/#/registration">
     <button>Register</button>
   </a>
+  <a href="/#/about">
+    <button>About</button>
+  </a>
+  <a href="/#/schedule">
+    <button>Schedule</button>
    <a href="/#/events">
     <button>Events</button>
   </a>
