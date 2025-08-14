@@ -16,6 +16,7 @@
   import Oblivion from './Oblivion.svelte';
   import CustomCursor from './CustomCursor.svelte';
   import OurTeam from './OurTeam.svelte';
+  import Schedule from './Schedule.svelte';
   const routes = {
     '/': Home,
     '/about': About,
@@ -29,7 +30,8 @@
     '/newtonsmemeathon': NewtonsMemeathon,
     '/triphysicstournament': TriPhysicsTournament,
     '/oblivion': Oblivion,
-    '/ourteam': OurTeam
+    '/ourteam': OurTeam,
+    '/schedule': Schedule
   };
 </script>
 
