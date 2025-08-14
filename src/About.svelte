@@ -195,7 +195,7 @@
       text-align: center;
       font-family: 'FuturaBold', sans-serif;
       color: white;
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1.6;
     }
   }
@@ -216,10 +216,14 @@
 <div class="mobile-about-text">
   <h2>About Eureka</h2>
   <p>
-    Eureka is our annual Physics Fest — a celebration of science, discovery, and innovation.
-    From mind-bending experiments to inspiring talks, we bring together curious minds and passionate souls.
-    Dive into the wonders of physics and experience the thrill of possibilities!
-  </p>
+            Eureka is Christ (Deemed to be University)’s flagship intercollegiate Physics festival, proudly hosted each year by the Department of Physics & Electronics. It brings together undergraduate and postgraduate students from across Karnataka, offering a dynamic platform to showcase their curiosity, creativity, and scientific prowess.</p>
+
+<p>From interactive workshops and captivating exhibitions to cultural showcases and fun, physics-themed events, Eureka celebrates the many dimensions of science beyond the classroom.</p>
+
+<p>This year’s theme, “Every Possibility Has a Probability,” reflects the belief that limits are merely theoretical—even the most improbable outcome still holds a spark of possibility. It’s a reminder that science thrives in the realm of the infinite.</p>
+
+<p>With seven unique events—Oblivion, Newton’s Meme-A-Thon, Ad Astra Abyssoque, PhyMUN, Tri-Physics Tournament, Maze Frenzy, and The Physicist’s Code—participants will be challenged to think beyond conventional boundaries, collaborate, and exchange knowledge in ways that inspire both intellect and imagination.
+          </p>
 </div>
 
 <!-- DESKTOP VIEW -->
