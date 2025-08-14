@@ -113,9 +113,9 @@
       Department of Physics & Electronics, Christ University
     </a>
 
-    <a class="social-item" href="mailto:{email}">
+    <!--<a class="social-item" href="mailto:{email}">
       <img src="/email.png" alt="Email" width="24" height="24" />
       {email}
-    </a>
+    </a> -->
   </div>
 </div>
