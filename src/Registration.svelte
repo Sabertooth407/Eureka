@@ -19,13 +19,13 @@
     align-items: center;
     min-height: 100vh;
     padding: 1rem;
+    text-align: center;
   }
 
   h1 {
     font-family: 'Transcity DEMO', sans-serif;
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-align: center;
   }
 
   .external-button {
@@ -42,7 +42,6 @@
     transition: all 0.25s ease;
     animation: pulseGlow 3s infinite;
     margin-bottom: 1.5rem;
-    text-align: center;
   }
 
   .external-button:hover {
@@ -56,6 +55,15 @@
     background: rgba(255, 110, 196, 0.1);
   }
 
+  .payment-info {
+    max-width: 900px;
+    font-family: 'FuturaBold', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
   @keyframes pulseGlow {
     0%, 100% {
       box-shadow: 0 4px 15px rgba(255, 110, 196, 0.5);
@@ -65,17 +73,14 @@
     }
   }
 
-
   @media (max-width: 768px) {
-    h1 {
-      font-size: 3rem;
-    }
-
     .external-button {
       width: 80%;
       font-size: 1rem;
     }
-
+    .payment-info {
+      font-size: 0.95rem;
+    }
   }
 
   @media (max-width: 480px) {
@@ -83,20 +88,25 @@
       width: 90%;
       font-size: 0.95rem;
     }
-
-    h1 {
-      font-size: 3rem;
+    .payment-info {
+      font-size: 0.9rem;
     }
   }
 </style>
 
 <div class="registration-container">
   <h1>Registration</h1>
-<button class="external-button" on:click={openRegistrationSite}>
+
+  <button class="external-button" on:click={openRegistrationSite}>
     Registration Form 
-    </button>
+  </button>
+
   <button class="external-button" on:click={openPaymentSite}>
     Payment
   </button>
-  
+
+  <p class="payment-info">
+    The payment button will direct you to the Online payment portal.<br>
+    Select <strong>"Fee name"</strong> → <strong>"FEST"</strong> and choose <strong>"Eureka-2025"</strong>.
+  </p>
 </div>
