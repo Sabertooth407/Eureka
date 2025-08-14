@@ -1,6 +1,9 @@
-<!--<script>
-  function openExternalSite() {
+<script>
+  function openPaymentSite() {
     window.open("https://southindianbank.in/ChristFee/", "_blank");
+  }
+  function openRegistrationSite() {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLScwJ2sgGZr2wP7K9fUSeJ1cS1VYoynecos6A5tGxTiDIIZBXw/viewform", "_blank");
   }
 </script>
 
@@ -62,14 +65,6 @@
     }
   }
 
-  iframe {
-    width: 100%;
-    max-width: 900px;
-    height: 90vh;
-    border: none;
-    border-radius: 8px;
-    background-color: transparent;
-  }
 
   @media (max-width: 768px) {
     h1 {
@@ -81,10 +76,6 @@
       font-size: 1rem;
     }
 
-    iframe {
-      height: 100vh;
-      width: 100vw;
-    }
   }
 
   @media (max-width: 480px) {
@@ -101,54 +92,11 @@
 
 <div class="registration-container">
   <h1>Registration</h1>
-
-  <button class="external-button" on:click={openExternalSite}>
+<button class="external-button" on:click={openRegistrationSite}>
+    Registration Form 
+    </button>
+  <button class="external-button" on:click={openPaymentSite}>
     Payment
   </button>
-
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLScQwGSpVxrF9iOwspQq25QpIhLb8OfhNQ5EqHCUMsLZGzc6-A/viewform?embedded=true"
-    allowfullscreen>
-  </iframe>
-</div>
--->
-
-<style>
-  .coming-soon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* full height */
-    color: white;
-    font-family: 'Transcity DEMO', sans-serif;
-    font-size: 3rem;
-  }
-
-  .dots span {
-    animation: blink 1.5s infinite;
-    opacity: 0;
-  }
-
-  .dots span:nth-child(1) {
-    animation-delay: 0s;
-  }
-  .dots span:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  .dots span:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-
-  @keyframes blink {
-    0%, 20% { opacity: 0; }
-    40%, 100% { opacity: 1; }
-  }
-</style>
-
-<div class="coming-soon-container">
-  Coming Soon<span class="dots">
-    <span>.</span>
-    <span>.</span>
-    <span>.</span>
-  </span>
+  
 </div>
