@@ -7,12 +7,14 @@
   import Events from './Events.svelte';
   import Registration from './Registration.svelte';
   import Contacts from './Contacts.svelte';
+  import MazeFrenzy from './MazeFrenzy.svelte';
   const routes = {
     '/': Home,
     '/about': About,
     '/events': Events,
     '/registration': Registration,
-    '/contact': Contacts
+    '/contact': Contacts,
+    '/mazefrenzy': MazeFrenzy
   };
 </script>
 

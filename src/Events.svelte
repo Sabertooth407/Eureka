@@ -2,7 +2,7 @@
   import { link } from 'svelte-spa-router';
 
   const events = [
-    { name: "Maze Frenzy", img: "/mazefrenzy.png", link: "/maze-frenzy" },
+    { name: "Maze Frenzy", img: "/mazefrenzy.png", link: "/mazefrenzy" },
     { name: "The Physicist's Code", img: "/physicistscode.png", link: "/physicists-code" },
     { name: "PhyMUN", img: "/phymun.png", link: "/phymun" },
     { name: "Ad Astra Abyssoque", img: "/adastra.png", link: "/ad-astra-abyssoque" },
