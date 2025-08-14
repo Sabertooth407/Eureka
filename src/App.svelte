@@ -15,6 +15,7 @@
   import TriPhysicsTournament from './TriPhysicsTournament.svelte';
   import Oblivion from './Oblivion.svelte';
   import CustomCursor from './CustomCursor.svelte';
+  import OurTeam from './OurTeam.svelte';
   const routes = {
     '/': Home,
     '/about': About,
@@ -27,7 +28,8 @@
     '/adastra': AdAstra,
     '/newtonsmemeathon': NewtonsMemeathon,
     '/triphysicstournament': TriPhysicsTournament,
-    '/oblivion': Oblivion
+    '/oblivion': Oblivion,
+    '/ourteam': OurTeam
   };
 </script>
 

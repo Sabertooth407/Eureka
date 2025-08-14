@@ -88,10 +88,10 @@ img {
 
 /* Tagline */
 .tagline {
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(2rem, 3vw, 4rem);
   margin-top: 0.5rem;
   color: #ffffff;
-  font-family: 'FuturaBold', sans-serif;
+  font-family: 'Transcity DEMO', sans-serif;
   max-width: 90%;
 }
 
@@ -99,9 +99,9 @@ img {
 .social-icons {
   display: flex;
   gap: clamp(0.8rem, 3vw, 1.5rem);
-  margin-top: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .social-icons a {
@@ -286,6 +286,8 @@ img {
   <a href="/#/contact">
     <button>Contact</button>
   </a>
+  <a href="/#/ourteam">
+    <button>Our Team</button>
   <a href="/brochure.pdf" target="_blank" rel="noopener noreferrer">
     <button>Brochure</button>
   </div>

@@ -132,6 +132,7 @@
       <a use:link href="/about" on:click={() => menuOpen = false}>About</a>
       <a use:link href="/events" on:click={() => menuOpen = false}>Events</a>
       <a use:link href="/contact" on:click={() => menuOpen = false}>Contact</a>
+      <a use:link href="/ourteam" on:click={() => menuOpen = false}>Our Team</a>
     </div>
   </nav>
 
