@@ -14,6 +14,7 @@
   import NewtonsMemeathon from './NewtonsMemeathon.svelte';
   import TriPhysicsTournament from './TriPhysicsTournament.svelte';
   import Oblivion from './Oblivion.svelte';
+  import CustomCursor from './CustomCursor.svelte';
   const routes = {
     '/': Home,
     '/about': About,
@@ -37,8 +38,11 @@
     font-family: system-ui, sans-serif;
     background-color: black;
     color: white;
+    cursor: none !important;
   }
 </style>
+<CustomCursor size={15} intensity={1.1} />
+<slot />
 <Background />
 <Navbar />
 <Router {routes} />
