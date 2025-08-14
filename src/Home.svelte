@@ -174,6 +174,8 @@ img {
   background: rgba(255, 110, 196, 0.1); /* subtle click fill */
 }
 
+
+
 /* Pulse glow stays */
 @keyframes pulseGlow {
   0%, 100% {
@@ -194,6 +196,9 @@ img {
   img {
     width: clamp(200px, 50vw, 350px); /* Bigger width for phones */
     max-width: 100%;
+  }
+  .brochure-btn{
+    display: none !important;
   }
 }
 </style>
