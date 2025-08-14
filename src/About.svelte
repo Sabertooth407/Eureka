@@ -83,13 +83,13 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: -90px;
+  top: 0;
 }
 
   .content-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 4rem;
     max-width: 1200px;
     flex-wrap: wrap;
@@ -102,7 +102,7 @@
     border-radius: 1rem;
     color: white;
     font-family: 'FuturaBold', sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     text-align: center;
     z-index: 10;
@@ -112,7 +112,7 @@
   .image-column {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   .image-column img {
@@ -134,7 +134,7 @@
     display: flex;
     justify-content: center;
     gap: 5rem;
-    margin-top: -10rem;
+    margin-top: -9rem;
     flex-wrap: wrap;
   }
 
@@ -239,9 +239,13 @@
         <h2 class="about-heading">About Eureka</h2>
         <div class="text-box">
           <p>
-            Eureka is our annual Physics Fest — a celebration of science, discovery, and innovation.
-            From mind-bending experiments to inspiring talks, we bring together curious minds and passionate souls.
-            Dive into the wonders of physics and experience the thrill of possibilities!
+            Eureka is Christ (Deemed to be University)’s flagship intercollegiate Physics festival, proudly hosted each year by the Department of Physics & Electronics. It brings together undergraduate and postgraduate students from across Karnataka, offering a dynamic platform to showcase their curiosity, creativity, and scientific prowess.</p>
+
+<p>From interactive workshops and captivating exhibitions to cultural showcases and fun, physics-themed events, Eureka celebrates the many dimensions of science beyond the classroom.</p>
+
+<p>This year’s theme, “Every Possibility Has a Probability,” reflects the belief that limits are merely theoretical—even the most improbable outcome still holds a spark of possibility. It’s a reminder that science thrives in the realm of the infinite.</p>
+
+<p>With seven unique events—Oblivion, Newton’s Meme-A-Thon, Ad Astra Abyssoque, PhyMUN, Tri-Physics Tournament, Maze Frenzy, and The Physicist’s Code—participants will be challenged to think beyond conventional boundaries, collaborate, and exchange knowledge in ways that inspire both intellect and imagination.
           </p>
         </div>
       </div>
