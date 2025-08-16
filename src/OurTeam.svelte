@@ -1,6 +1,23 @@
 <script>
-  const row1 = ["Y. Srivathsa", "Aayush Rai", "Mohith Nigam", "Kishan Jaiganesh", "Soham Sarkar","Jeril", "Anzer M"];
-  const row2 = ["Kanak Wasnik", "Anokha Ramesh", "Ashika K J ", "Melonee M", "Ekjot", "Akshatha", "Aarya Sajayan","Preksha"];
+  const row1 = [
+    "Y. Srivathsa",
+    "Aayush Rai",
+    "Mohith Nigam",
+    "Kishan Jaiganesh",
+    "Soham Sarkar",
+    "Jeril",
+    "Anzer M"
+  ];
+  const row2 = [
+    "Kanak Wasnik",
+    "Anokha Ramesh",
+    "Ashika K J",
+    "Melonee M",
+    "Ekjot",
+    "Akshatha",
+    "Aarya Sajayan",
+    "Preksha"
+  ];
 </script>
 
 <style>
@@ -12,6 +29,7 @@
     min-height: 100vh;
     color: white;
     text-align: center;
+    padding: 1rem;
   }
 
   h1 {
@@ -31,13 +49,40 @@
 
   .names-row {
     font-family: 'FuturaBold', sans-serif;
-    font-size: 1.2rem;
-    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
     border: 1px solid #ff6ec4;
     border-radius: 8px;
     background: rgba(255, 110, 196, 0.1);
+    padding: 1rem;
     margin: 0.5rem 0;
-    min-width: 60%;
+    width: 100%;
+    max-width: 1000px;
+    word-wrap: break-word;
+    line-height: 1.6;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    .names-row {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 3rem;
+    }
+    .names-row {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
   }
 </style>
 
@@ -45,12 +90,15 @@
   <h1>Our Team</h1>
 
   <!-- Middle picture -->
-  <img src="/team.JPG" alt="Our Team">
+  <img src="/team.JPG" alt="Our Team" />
 
-  <!-- Row 1 -->
+  <!-- Names combined -->
   <div class="names-row">
-    Row 1 (Left to Right): {row1.join(", ")}
+    Row 1 (Left to Right) 
     <br>
-    Row 2 (Left to Right): {row2.join(", ")}
+    {row1.join(", ")}
+    <br/><br/>
+    Row 2 (Left to Right)
+    <br>{row2.join(", ")}
   </div>
 </div>
