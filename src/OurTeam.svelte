@@ -1,40 +1,56 @@
+<script>
+  const row1 = ["Y. Srivathsa", "Aayush Rai", "Mohith Nigam", "Kishan Jaiganesh", "Soham Sarkar", "Anzer M"];
+  const row2 = ["Kanak Wasnik", "Anokha Ramesh", "Ashika K J ", "Melonee M", "Ekjot", "Akshatha", "Aarya Sajayan",];
+</script>
 
 <style>
-  .coming-soon-container {
+  .team-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* full height */
+    justify-content: flex-start;
+    min-height: 100vh;
     color: white;
+    text-align: center;
+  }
+
+  h1 {
     font-family: 'Transcity DEMO', sans-serif;
     font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
   }
 
-  .dots span {
-    animation: blink 1.5s infinite;
-    opacity: 0;
+  img {
+    max-width: 600px;
+    width: 90%;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(255, 110, 196, 0.5);
   }
 
-  .dots span:nth-child(1) {
-    animation-delay: 0s;
-  }
-  .dots span:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  .dots span:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-
-  @keyframes blink {
-    0%, 20% { opacity: 0; }
-    40%, 100% { opacity: 1; }
+  .names-row {
+    font-family: 'FuturaBold', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #ff6ec4;
+    border-radius: 8px;
+    background: rgba(255, 110, 196, 0.1);
+    margin: 0.5rem 0;
+    min-width: 60%;
   }
 </style>
 
-<div class="coming-soon-container">
-  Coming Soon<span class="dots">
-    <span>.</span>
-    <span>.</span>
-    <span>.</span>
-  </span>
+<div class="team-container">
+  <h1>Our Team</h1>
+
+  <!-- Middle picture -->
+  <img src="/team.JPG" alt="Our Team">
+
+  <!-- Row 1 -->
+  <div class="names-row">
+    Row 1 (Left to Right): {row1.join(", ")}
+    <br>
+    Row 2 (Left to Right): {row2.join(", ")}
+  </div>
 </div>
