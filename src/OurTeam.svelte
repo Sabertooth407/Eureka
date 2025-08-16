@@ -1,6 +1,6 @@
 <script>
-  const row1 = ["Y. Srivathsa", "Aayush Rai", "Mohith Nigam", "Kishan Jaiganesh", "Soham Sarkar", "Anzer M"];
-  const row2 = ["Kanak Wasnik", "Anokha Ramesh", "Ashika K J ", "Melonee M", "Ekjot", "Akshatha", "Aarya Sajayan",];
+  const row1 = ["Y. Srivathsa", "Aayush Rai", "Mohith Nigam", "Kishan Jaiganesh", "Soham Sarkar","Jeril", "Anzer M"];
+  const row2 = ["Kanak Wasnik", "Anokha Ramesh", "Ashika K J ", "Melonee M", "Ekjot", "Akshatha", "Aarya Sajayan","Preksha"];
 </script>
 
 <style>
