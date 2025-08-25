@@ -275,8 +275,8 @@ img {
   <!-- Mobile-only navigation buttons -->
   <div class="mobile-buttons">
     
-  <a href="/#/registration">
-    <button>Register</button>
+  <a href="/#/hightlights">
+    <button>Highlights</button>
   </a>
   <a href="/#/about">
     <button>About</button>
