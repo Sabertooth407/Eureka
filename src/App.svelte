@@ -5,7 +5,7 @@
   import Background from './Background.svelte';
   import About from './About.svelte';
   import Events from './Events.svelte';
-  import Registration from './Registration.svelte';
+  //import Registration from './Registration.svelte';
   import Contacts from './Contacts.svelte';
   import MazeFrenzy from './MazeFrenzy.svelte';
   import ThePhysicistsCode from './ThePhysicistsCode.svelte';
@@ -17,12 +17,13 @@
   import CustomCursor from './CustomCursor.svelte';
   import OurTeam from './OurTeam.svelte';
   import Schedule from './Schedule.svelte';
+  import Highlights from './Highlights.svelte';
 
   const routes = {
     '/': Home,
     '/about': About,
     '/events': Events,
-    '/registration': Registration,
+    //'/registration': Registration,
     '/contact': Contacts,
     '/mazefrenzy': MazeFrenzy,
     '/thephysicistscode': ThePhysicistsCode,
@@ -32,7 +33,8 @@
     '/triphysicstournament': TriPhysicsTournament,
     '/oblivion': Oblivion,
     '/ourteam': OurTeam,
-    '/schedule': Schedule
+    '/schedule': Schedule,
+    '/highlights': Highlights
   };
 
   import { onMount, onDestroy } from "svelte";
