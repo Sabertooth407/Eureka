@@ -16,8 +16,9 @@
   import Oblivion from './Oblivion.svelte';
   import CustomCursor from './CustomCursor.svelte';
   import OurTeam from './OurTeam.svelte';
-  import Schedule from './Schedule.svelte';
+  //import Schedule from './Schedule.svelte';
   import Highlights from './Highlights.svelte';
+  import Results from './Results.svelte';
 
   const routes = {
     '/': Home,
@@ -33,8 +34,9 @@
     '/triphysicstournament': TriPhysicsTournament,
     '/oblivion': Oblivion,
     '/ourteam': OurTeam,
-    '/schedule': Schedule,
-    '/highlights': Highlights
+    //'/schedule': Schedule,
+    '/highlights': Highlights,
+    '/results': Results
   };
 
   import { onMount, onDestroy } from "svelte";

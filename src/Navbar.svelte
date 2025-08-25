@@ -131,7 +131,8 @@
       <!--<a use:link href="/registration" on:click={() => menuOpen = false}>Register</a>-->
       <a use:link href="/about" on:click={() => menuOpen = false}>About</a>
       <a use:link href="/highlights" on:click={() => menuOpen = false}>Highlights</a>
-      <a use:link href="/schedule" on:click={() => menuOpen = false}>Schedule</a>
+      <a use:link href="/results" on:click={() => menuOpen = false}>Results</a>
+      <!--<a use:link href="/schedule" on:click={() => menuOpen = false}>Schedule</a>-->
       <a use:link href="/events" on:click={() => menuOpen = false}>Events</a>
       <a use:link href="/contact" on:click={() => menuOpen = false}>Contact</a>
       <a use:link href="/ourteam" on:click={() => menuOpen = false}>Our Team</a>

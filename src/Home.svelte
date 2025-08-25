@@ -281,8 +281,8 @@ img {
   <a href="/#/about">
     <button>About</button>
   </a>
-  <a href="/#/schedule">
-    <button>Schedule</button>
+  <a href="/#/results">
+    <button>Results</button>
    <a href="/#/events">
     <button>Events</button>
   </a>
