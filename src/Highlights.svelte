@@ -138,6 +138,7 @@
     <video 
       src={videoUrl} 
       controls 
+      preload="metadata"
       poster="/logo.png"
     >
       Your browser does not support the video tag.
